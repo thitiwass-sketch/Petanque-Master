@@ -1,0 +1,1202 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petanque Master Guide Pro - เทคนิคการเล่นและคู่มือเปตองระดับมืออาชีพ</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Plus Jakarta Sans & Prompt -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Pro Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Prompt', 'Plus Jakarta Sans', 'sans-serif'],
+                        heading: ['Plus Jakarta Sans', 'Prompt', 'sans-serif'],
+                    },
+                    colors: {
+                        terracotta: {
+                            50: '#fff7f5',
+                            100: '#ffeee8',
+                            400: '#f07148',
+                            500: '#e05326',
+                            600: '#cb3a11',
+                            700: '#aa2a0a',
+                            900: '#641b08',
+                        },
+                        steel: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                            950: '#080d1a',
+                        },
+                        amber_gold: {
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                        }
+                    },
+                    boxShadow: {
+                        'glow-orange': '0 0 35px -5px rgba(224, 83, 38, 0.35)',
+                        'glow-cyan': '0 0 35px -5px rgba(56, 189, 248, 0.25)',
+                        'inner-light': 'inset 0 1px 0 0 rgba(255, 255, 255, 0.15)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-panel {
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glass-card-light {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #f59e0b 0%, #f07148 50%, #e05326 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-pattern {
+            background-color: #080d1a;
+            background-image: radial-gradient(rgba(224, 83, 38, 0.15) 1px, transparent 1px), radial-gradient(rgba(255, 255, 255, 0.05) 1px, #080d1a 1px);
+            background-size: 40px 40px;
+            background-position: 0 0, 20px 20px;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 9999px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #e05326;
+        }
+    </style>
+</head>
+<body class="bg-steel-950 text-slate-100 font-sans antialiased flex flex-col min-h-screen selection:bg-terracotta-500 selection:text-white">
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-50 glass-panel border-b border-slate-800/80 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand Logo -->
+                <a href="#" class="flex items-center space-x-3.5 group">
+                    <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-terracotta-600 via-amber_gold-500 to-amber-300 flex items-center justify-center shadow-glow-orange border border-amber-200/40 transform group-hover:scale-105 transition duration-300">
+                        <i class="fa-solid fa-circle-dot text-slate-950 text-2xl"></i>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-2xl font-black tracking-tight text-white font-heading">
+                            PETANQUE<span class="gradient-text ml-1">PRO</span>
+                        </span>
+                        <span class="text-[10px] text-slate-400 font-medium tracking-widest uppercase">Master Technique Guide</span>
+                    </div>
+                </a>
+
+                <!-- Creator Badge in Header -->
+                <div class="hidden xl:flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-amber-500/30 text-xs font-medium text-slate-300 shadow-inner">
+                    <i class="fa-solid fa-code text-amber-400"></i>
+                    <span class="text-slate-400">ผู้ออกแบบสร้างสรรค์พัฒนา:</span>
+                    <span class="font-bold text-amber-300">ฐิติวัสส์ กาญจนาพิมาย</span>
+                </div>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden lg:flex items-center space-x-1 bg-slate-900/80 p-1.5 rounded-2xl border border-slate-800">
+                    <a href="#simulator" class="px-4 py-2 rounded-xl text-xs font-semibold text-slate-300 hover:text-white hover:bg-slate-800 transition-all flex items-center gap-2">
+                        <i class="fa-solid fa-cubes text-amber-400"></i> Trajectory Visualizer
+                    </a>
+                    <a href="#calculator" class="px-4 py-2 rounded-xl text-xs font-semibold text-slate-300 hover:text-white hover:bg-slate-800 transition-all flex items-center gap-2">
+                        <i class="fa-solid fa-calculator text-terracotta-400"></i> Boule Finder
+                    </a>
+                    <a href="#techniques" class="px-4 py-2 rounded-xl text-xs font-semibold text-slate-300 hover:text-white hover:bg-slate-800 transition-all flex items-center gap-2">
+                        <i class="fa-solid fa-bullseye text-sky-400"></i> Technique Library
+                    </a>
+                    <a href="#specs" class="px-4 py-2 rounded-xl text-xs font-semibold text-slate-300 hover:text-white hover:bg-slate-800 transition-all flex items-center gap-2">
+                        <i class="fa-solid fa-shield-halved text-emerald-400"></i> Hardness & Specs
+                    </a>
+                    <a href="#tactics" class="px-4 py-2 rounded-xl text-xs font-semibold text-slate-300 hover:text-white hover:bg-slate-800 transition-all flex items-center gap-2">
+                        <i class="fa-solid fa-chess-board text-purple-400"></i> Tactics
+                    </a>
+                </nav>
+
+                <!-- Action Button -->
+                <div class="hidden sm:flex items-center gap-3">
+                    <a href="#calculator" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-terracotta-600 to-terracotta-500 hover:from-terracotta-500 hover:to-amber-500 text-white font-bold text-xs tracking-wide shadow-glow-orange transition duration-300 transform hover:-translate-y-0.5 border border-amber-300/20 flex items-center gap-2">
+                        <i class="fa-solid fa-crosshairs"></i> วิเคราะห์สเปกลูก
+                    </a>
+                </div>
+
+                <!-- Mobile Hamburger Button -->
+                <button id="mobile-menu-btn" class="lg:hidden p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-white focus:outline-none">
+                    <i class="fa-solid fa-bars-staggered text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-slate-900/95 backdrop-blur-2xl border-b border-slate-800 px-4 pt-3 pb-6 space-y-2">
+            <a href="#simulator" class="mobile-nav-link block px-4 py-3 rounded-xl text-sm font-semibold text-slate-200 hover:bg-slate-800 hover:text-amber-400">
+                <i class="fa-solid fa-cubes text-amber-400 mr-3"></i> Simulation & Trajectory
+            </a>
+            <a href="#calculator" class="mobile-nav-link block px-4 py-3 rounded-xl text-sm font-semibold text-slate-200 hover:bg-slate-800 hover:text-terracotta-400">
+                <i class="fa-solid fa-calculator text-terracotta-400 mr-3"></i> Boule Finder Calculator
+            </a>
+            <a href="#techniques" class="mobile-nav-link block px-4 py-3 rounded-xl text-sm font-semibold text-slate-200 hover:bg-slate-800 hover:text-sky-400">
+                <i class="fa-solid fa-bullseye text-sky-400 mr-3"></i> Technique Masterclass
+            </a>
+            <a href="#specs" class="mobile-nav-link block px-4 py-3 rounded-xl text-sm font-semibold text-slate-200 hover:bg-slate-800 hover:text-emerald-400">
+                <i class="fa-solid fa-shield-halved text-emerald-400 mr-3"></i> Hardness & Specs Matrix
+            </a>
+            <a href="#tactics" class="mobile-nav-link block px-4 py-3 rounded-xl text-sm font-semibold text-slate-200 hover:bg-slate-800 hover:text-purple-400">
+                <i class="fa-solid fa-chess-board text-purple-400 mr-3"></i> Game Strategy & Terrain
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-pattern relative py-16 lg:py-24 overflow-hidden">
+        <!-- Ambient Glow Backdrops -->
+        <div class="absolute top-1/4 left-10 w-96 h-96 bg-terracotta-600/20 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="absolute bottom-10 right-10 w-96 h-96 bg-amber-500/10 rounded-full blur-[140px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Column: Copywriting -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex flex-wrap items-center justify-center lg:justify-start gap-2">
+                        <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-slate-900/80 border border-slate-700/80 text-xs font-medium text-amber-400 shadow-inner-light">
+                            <span class="flex h-2 w-2 relative">
+                                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span>
+                            </span>
+                            <span>FIPJP Official Standard Compatible</span>
+                        </div>
+
+                        <!-- Developer Badge in Hero -->
+                        <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-slate-900/80 border border-amber-500/30 text-xs font-medium text-amber-300 shadow-inner-light">
+                            <i class="fa-solid fa-wand-magic-sparkles text-amber-400"></i>
+                            <span>ผู้ออกแบบสร้างสรรค์พัฒนา: <strong>ฐิติวัสส์ กาญจนาพิมาย</strong></span>
+                        </div>
+                    </div>
+
+                    <h1 class="text-4xl sm:text-6xl font-black tracking-tight leading-[1.1] font-heading">
+                        เรียนรู้ทักษะเปตอง <br>
+                        <span class="gradient-text">ระดับมืออาชีพครบวงจร</span>
+                    </h1>
+
+                    <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed font-light">
+                        เจาะลึกเทคนิคการเข้าลูก (Pointing) การยิงเปลี่ยน (Carreau) การคำนวณสเปกอุปกรณ์ให้รับกับสรีระฝ่ามือ และการวางแทกติกแก้ทางสนามทุกรูปแบบ
+                    </p>
+
+                    <!-- Quick Spec Badge Grid -->
+                    <div class="pt-2 grid grid-cols-3 gap-3 max-w-md mx-auto lg:mx-0">
+                        <div class="glass-card p-3 rounded-2xl text-center">
+                            <span class="text-lg sm:text-xl font-bold text-amber-400 font-heading block">70.5 - 80</span>
+                            <span class="text-[11px] text-slate-400">ขนาด Ø (มม.)</span>
+                        </div>
+                        <div class="glass-card p-3 rounded-2xl text-center">
+                            <span class="text-lg sm:text-xl font-bold text-terracotta-400 font-heading block">650 - 800</span>
+                            <span class="text-[11px] text-slate-400">น้ำหนัก (กรัม)</span>
+                        </div>
+                        <div class="glass-card p-3 rounded-2xl text-center">
+                            <span class="text-lg sm:text-xl font-bold text-sky-400 font-heading block">110 - 140</span>
+                            <span class="text-[11px] text-slate-400">ความแข็ง kg/mm²</span>
+                        </div>
+                    </div>
+
+                    <!-- Call to action -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="#simulator" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-gradient-to-r from-terracotta-600 via-terracotta-500 to-amber-500 hover:from-terracotta-500 hover:to-amber-400 text-slate-950 font-black text-sm tracking-wide shadow-glow-orange transition duration-300 transform hover:-translate-y-0.5 text-center flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-play text-slate-950"></i> ทดลองจำลองวิถีลูก
+                        </a>
+                        <a href="#calculator" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-slate-900/90 hover:bg-slate-800 text-slate-200 font-bold text-sm border border-slate-700/80 transition text-center flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-sliders text-terracotta-400"></i> คำนวณเลือกลูกเปตอง
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Column: Interactive Quick Card -->
+                <div class="lg:col-span-5">
+                    <div class="glass-panel p-6 sm:p-8 rounded-3xl shadow-2xl relative border border-slate-700/60 overflow-hidden">
+                        <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-terracotta-500/20 rounded-full blur-3xl"></div>
+                        
+                        <div class="flex items-center justify-between pb-4 mb-6 border-b border-slate-800">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                            </div>
+                            <span class="text-xs font-mono text-slate-400">FIPJP RULEBOOK V2026</span>
+                        </div>
+
+                        <div class="space-y-4">
+                            <div class="p-4 rounded-2xl bg-slate-900/80 border border-slate-800 flex items-start space-x-4">
+                                <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center shrink-0 font-bold">
+                                    <i class="fa-solid fa-circle text-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-sm text-white">ลูกแก่น (Jack / Cochonnet)</h4>
+                                    <p class="text-xs text-slate-400 mt-1">เส้นผ่านศูนย์กลาง 30 มม. (±1มม.) ทำจากไม้เนื้อแข็ง หรือวัสดุสังเคราะห์ย้อมสีสว่าง</p>
+                                </div>
+                            </div>
+
+                            <div class="p-4 rounded-2xl bg-slate-900/80 border border-slate-800 flex items-start space-x-4">
+                                <div class="w-10 h-10 rounded-xl bg-terracotta-500/20 text-terracotta-400 flex items-center justify-center shrink-0 font-bold">
+                                    <i class="fa-solid fa-arrows-spin text-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-sm text-white">แรงหมุนถอยหลัง (Backspin Control)</h4>
+                                    <p class="text-xs text-slate-400 mt-1">การปล่อยลูกสะบัดข้อมือกลับหลัง ช่วยเบรกระยะวิ่งบนพื้นดินขรุขระอย่างแม่นยำ</p>
+                                </div>
+                            </div>
+
+                            <div class="p-4 rounded-2xl bg-slate-900/80 border border-slate-800 flex items-start space-x-4">
+                                <div class="w-10 h-10 rounded-xl bg-sky-500/20 text-sky-400 flex items-center justify-center shrink-0 font-bold">
+                                    <i class="fa-solid fa-bullseye-pointer text-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-sm text-white">จุดตกกำหนดทิศทาง (Donnée)</h4>
+                                    <p class="text-xs text-slate-400 mt-1">ตำแหน่งบนพื้นสนามที่เลือกไว้สำหรับตกของลูกก่อนกลิ้งหรือหยุดใกล้มุมแก่น</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 1: INTERACTIVE CANVASTRAJECTORY SIMULATOR -->
+    <section id="simulator" class="py-16 bg-slate-900/90 border-y border-slate-800 scroll-mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-10">
+                <span class="text-xs font-bold tracking-widest text-amber-400 uppercase bg-amber-400/10 border border-amber-400/20 px-3.5 py-1 rounded-full inline-block mb-2">Interactive Physics Canvas</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white font-heading">จำลองวิถีลูกเปตอง (Trajectory Visualizer)</h2>
+                <p class="text-slate-400 text-sm mt-2">เลือกรูปแบบการโยน เพื่อดูการทำงานของวิถีโค้ง จุดตก (Donnée) และแรงหมุน Backspin</p>
+            </div>
+
+            <div class="glass-panel rounded-3xl p-6 sm:p-8 shadow-2xl border border-slate-800">
+                <!-- Trajectory Controls -->
+                <div class="flex flex-wrap justify-center gap-3 mb-6">
+                    <button onclick="setTrajectoryMode('rolling')" id="btn-traj-rolling" class="traj-btn px-5 py-2.5 rounded-xl text-xs font-bold transition flex items-center gap-2 bg-terracotta-600 text-white shadow-glow-orange">
+                        <i class="fa-solid fa-shoe-prints"></i> 1. การเข้าเรียบ (Rolling / Low Point)
+                    </button>
+                    <button onclick="setTrajectoryMode('halflob')" id="btn-traj-halflob" class="traj-btn px-5 py-2.5 rounded-xl text-xs font-bold transition flex items-center gap-2 bg-slate-800 text-slate-300 hover:bg-slate-700">
+                        <i class="fa-solid fa-chart-line"></i> 2. โยนครึ่งโด่ง (Demi-Portée)
+                    </button>
+                    <button onclick="setTrajectoryMode('highlob')" id="btn-traj-highlob" class="traj-btn px-5 py-2.5 rounded-xl text-xs font-bold transition flex items-center gap-2 bg-slate-800 text-slate-300 hover:bg-slate-700">
+                        <i class="fa-solid fa-arrow-up-from-ground-water"></i> 3. โยนโด่งสูง (High Lob / Portée)
+                    </button>
+                    <button onclick="setTrajectoryMode('carreau')" id="btn-traj-carreau" class="traj-btn px-5 py-2.5 rounded-xl text-xs font-bold transition flex items-center gap-2 bg-slate-800 text-slate-300 hover:bg-slate-700">
+                        <i class="fa-solid fa-burst"></i> 4. ตีติด / ตีเปลี่ยน (Carreau)
+                    </button>
+                </div>
+
+                <!-- Simulation Canvas Container -->
+                <div class="relative w-full bg-slate-950 rounded-2xl overflow-hidden border border-slate-800 shadow-inner h-72 sm:h-96">
+                    <canvas id="trajectoryCanvas" class="w-full h-full block cursor-pointer"></canvas>
+                    
+                    <!-- Overlay Controls / Metrics -->
+                    <div class="absolute top-4 left-4 glass-card p-3 rounded-xl text-xs space-y-1">
+                        <div class="flex items-center gap-2">
+                            <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+                            <span class="text-slate-300">ความสูงสูงสุด (Apex): <span id="sim-apex" class="font-mono text-amber-400 font-bold">1.2m</span></span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-2.5 h-2.5 rounded-full bg-sky-400"></span>
+                            <span class="text-slate-300">ระยะจุดตก (Donnée): <span id="sim-landing" class="font-mono text-sky-400 font-bold">3.5m</span></span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+                            <span class="text-slate-300">Backspin Rate: <span id="sim-spin" class="font-mono text-emerald-400 font-bold">Low</span></span>
+                        </div>
+                    </div>
+
+                    <button onclick="runTrajectoryAnim()" class="absolute bottom-4 right-4 px-4 py-2 bg-terracotta-600 hover:bg-terracotta-500 text-white font-bold text-xs rounded-xl shadow-lg flex items-center gap-2 transition">
+                        <i class="fa-solid fa-rotate-right"></i> เล่นการจำลองอีกครั้ง
+                    </button>
+                </div>
+
+                <!-- Dynamic Technique Note -->
+                <div id="sim-description" class="mt-4 p-4 rounded-xl bg-slate-900/60 border border-slate-800 text-xs sm:text-sm text-slate-300 flex items-start gap-3">
+                    <i class="fa-solid fa-circle-info text-amber-400 text-lg mt-0.5"></i>
+                    <div>
+                        <strong class="text-white block font-bold mb-0.5" id="sim-title">การเข้าเรียบ (Rolling Pointing)</strong>
+                        <span id="sim-text">ปล่อยลูกให้ลอยต่ำ ตกกระทบพื้นดินห่างจากแก่นประมาณ 2/3 ของระยะทาง แล้วให้ลูกวิ่งกลิ้งเข้าใกล้เป้าหมาย เหมาะสำหรับสนามดินบดแน่นราบเรียบ</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: PETANQUE FINDER CALCULATOR -->
+    <section id="calculator" class="py-16 bg-slate-950 scroll-mt-12 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-xs font-bold tracking-widest text-terracotta-400 uppercase bg-terracotta-500/10 border border-terracotta-500/20 px-3.5 py-1 rounded-full inline-block mb-2">Smart Fitting System</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white font-heading">Petanque Finder Calculator Pro</h2>
+                <p class="text-slate-400 text-sm mt-2">คำนวณและค้นหาสเปกลูกเปตองที่เหมาะกับฝ่ามือ ตำแหน่งการเล่น และระดับความแข็ง</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                <!-- Input Panel -->
+                <div class="lg:col-span-5 glass-panel p-6 sm:p-8 rounded-3xl border border-slate-800 space-y-6">
+                    <h3 class="text-lg font-bold text-white flex items-center gap-2 pb-3 border-b border-slate-800">
+                        <i class="fa-solid fa-sliders text-terracotta-500"></i> ปรับแต่งข้อมูลสรีระของคุณ
+                    </h3>
+
+                    <!-- Hand Size Interactive Slider -->
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <label class="text-xs font-bold text-slate-300 uppercase tracking-wider">ความยาวฝ่ามือ (Hand Length)</label>
+                            <span id="hand-length-val" class="text-base font-extrabold font-mono text-terracotta-400">180 mm</span>
+                        </div>
+                        <input type="range" id="hand-slider" min="150" max="220" value="180" step="1" oninput="updateCalculator()"
+                            class="w-full h-2.5 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-terracotta-500">
+                        <div class="flex justify-between text-[10px] text-slate-500 mt-1 font-mono">
+                            <span>150mm (มือเล็ก)</span>
+                            <span>185mm (มาตรฐาน)</span>
+                            <span>220mm (มือใหญ่)</span>
+                        </div>
+                    </div>
+
+                    <!-- Position Selection Tabs -->
+                    <div>
+                        <label class="text-xs font-bold text-slate-300 uppercase tracking-wider block mb-2">ตำแหน่งการเล่นหลัก (Position)</label>
+                        <div class="grid grid-cols-3 gap-2">
+                            <button onclick="setCalcPosition('pointer')" id="btn-pos-pointer" class="calc-pos-btn p-3 rounded-2xl border text-center transition bg-terracotta-600/20 border-terracotta-500 text-white">
+                                <i class="fa-solid fa-bullseye text-base block mb-1 text-terracotta-400"></i>
+                                <span class="text-xs font-bold block">มือเข้า (Point)</span>
+                            </button>
+                            <button onclick="setCalcPosition('milieu')" id="btn-pos-milieu" class="calc-pos-btn p-3 rounded-2xl border text-center transition bg-slate-900 border-slate-800 text-slate-400 hover:text-slate-200">
+                                <i class="fa-solid fa-shuffle text-base block mb-1"></i>
+                                <span class="text-xs font-bold block">มือกลาง (Milieu)</span>
+                            </button>
+                            <button onclick="setCalcPosition('shooter')" id="btn-pos-shooter" class="calc-pos-btn p-3 rounded-2xl border text-center transition bg-slate-900 border-slate-800 text-slate-400 hover:text-slate-200">
+                                <i class="fa-solid fa-crosshairs text-base block mb-1"></i>
+                                <span class="text-xs font-bold block">มือตี (Shooter)</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Striation Preference -->
+                    <div>
+                        <label class="text-xs font-bold text-slate-300 uppercase tracking-wider block mb-2">รูปแบบลาย (Striation / Grooves)</label>
+                        <select id="striation-select" onchange="updateCalculator()" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 text-xs font-semibold text-slate-200 focus:outline-none focus:border-terracotta-500">
+                            <option value="smooth">ลูกเรียบไร้ลาย (0 Striae) - หลุดมือง่าย ชื่นชอบโดยมือตี</option>
+                            <option value="single" selected>ลายเดี่ยวมาตรฐาน (1-2 Striae) - ช่วยควบคุมทิศทาง</option>
+                            <option value="heavy">ลายถี่หนาแน่น (Multiple Striae) - เกาะจับแน่น หยุดบนพื้นหินได้ดี</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Result Card Display -->
+                <div class="lg:col-span-7 glass-panel p-6 sm:p-8 rounded-3xl border border-slate-800 space-y-6">
+                    <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+                        <h3 class="text-lg font-bold text-amber-400 flex items-center gap-2">
+                            <i class="fa-solid fa-square-check"></i> ผลการแนะนำสเปกลูกเปตอง
+                        </h3>
+                        <span class="text-[11px] bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-mono px-3 py-1 rounded-full">FIT ACCURACY 99.4%</span>
+                    </div>
+
+                    <!-- Recommended Specs Grid Cards -->
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                        <div class="glass-card p-4 rounded-2xl border border-slate-800 relative overflow-hidden">
+                            <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 block mb-1">เส้นผ่านศูนย์กลาง (Ø)</span>
+                            <span id="res-diameter" class="text-3xl font-black font-heading text-amber-400">73 มม.</span>
+                            <span class="text-[11px] text-slate-500 block mt-1">ช่วงที่เหมาะ: <span id="res-dia-range">72-74</span> มม.</span>
+                        </div>
+
+                        <div class="glass-card p-4 rounded-2xl border border-slate-800 relative overflow-hidden">
+                            <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 block mb-1">น้ำหนัก (Weight)</span>
+                            <span id="res-weight" class="text-3xl font-black font-heading text-terracotta-400">700 กรัม</span>
+                            <span class="text-[11px] text-slate-500 block mt-1">ช่วงที่เหมาะ: <span id="res-weight-range">690-710</span> ก.</span>
+                        </div>
+
+                        <div class="col-span-2 sm:col-span-1 glass-card p-4 rounded-2xl border border-slate-800 relative overflow-hidden">
+                            <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 block mb-1">ระดับความแข็ง</span>
+                            <span id="res-hardness" class="text-xl font-bold font-heading text-sky-400 block">แข็ง (Hard)</span>
+                            <span id="res-hardness-val" class="text-xs font-mono text-slate-400">140 kg/mm²</span>
+                        </div>
+                    </div>
+
+                    <!-- Strategic Advice -->
+                    <div class="p-4 rounded-2xl bg-slate-900/80 border border-slate-800 space-y-3">
+                        <div class="flex items-start gap-3">
+                            <div class="w-7 h-7 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 text-xs font-bold">
+                                <i class="fa-solid fa-circle-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xs font-bold text-white">เนื้อโลหะและลายที่แนะนำ:</h4>
+                                <p id="res-material" class="text-xs text-slate-300 mt-0.5">สแตนเลส (Stainless Steel) พร้อมลายเดี่ยว ช่วยการเบรกพื้นผิว ดินบดแน่น</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <div class="w-7 h-7 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center shrink-0 text-xs font-bold">
+                                <i class="fa-solid fa-lightbulb"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xs font-bold text-white">คำแนะนำการควบคุม:</h4>
+                                <p id="res-advice" class="text-xs text-slate-300 mt-0.5">เน้นน้ำหนักลูกแน่นเพื่อยึดตำแหน่งหน้าแก่น ลดแรงกระดอนเมื่อกระทบหิน</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Visual Fit Gauge Indicator -->
+                    <div class="p-4 rounded-2xl bg-slate-900/50 border border-slate-800">
+                        <div class="flex justify-between text-xs font-bold text-slate-300 mb-2">
+                            <span>สัดส่วนการจับกระชับฝ่ามือ (Grip Ergonomics)</span>
+                            <span id="fit-percent" class="font-mono text-terracotta-400">65%</span>
+                        </div>
+                        <div class="w-full bg-slate-800 h-3 rounded-full overflow-hidden p-0.5 border border-slate-700">
+                            <div id="fit-gauge-bar" class="bg-gradient-to-r from-amber-400 via-terracotta-500 to-terracotta-600 h-full rounded-full transition-all duration-500" style="width: 65%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: TECHNIQUE MASTERCLASS LIBRARY -->
+    <section id="techniques" class="py-16 bg-slate-900/60 border-y border-slate-800 scroll-mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
+                <div>
+                    <span class="text-xs font-bold tracking-widest text-sky-400 uppercase bg-sky-400/10 border border-sky-400/20 px-3.5 py-1 rounded-full inline-block mb-2">Comprehensive Technique Library</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white font-heading">บทเรียนทักษะการเล่นเปตอง</h2>
+                    <p class="text-slate-400 text-sm mt-1">คลังวิชาทักษะตั้งแต่ระดับพื้นฐานจนถึงการทำคะแนนชั้นสูง</p>
+                </div>
+
+                <!-- Filter Level Tabs -->
+                <div class="flex flex-wrap gap-2">
+                    <button onclick="filterTechniques('all')" class="tech-filter-btn px-4 py-2 text-xs font-bold rounded-xl border transition bg-terracotta-600 text-white border-terracotta-500" data-filter="all">ทั้งหมด</button>
+                    <button onclick="filterTechniques('beginner')" class="tech-filter-btn px-4 py-2 text-xs font-bold rounded-xl border transition bg-slate-800 text-slate-300 border-slate-700 hover:bg-slate-700" data-filter="beginner">มือใหม่</button>
+                    <button onclick="filterTechniques('intermediate')" class="tech-filter-btn px-4 py-2 text-xs font-bold rounded-xl border transition bg-slate-800 text-slate-300 border-slate-700 hover:bg-slate-700" data-filter="intermediate">ระดับกลาง</button>
+                    <button onclick="filterTechniques('advanced')" class="tech-filter-btn px-4 py-2 text-xs font-bold rounded-xl border transition bg-slate-800 text-slate-300 border-slate-700 hover:bg-slate-700" data-filter="advanced">ชั้นสูง</button>
+                </div>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="mb-8 max-w-md">
+                <div class="relative">
+                    <input type="text" id="tech-search" placeholder="ค้นหาเทคนิค เช่น จับลูก, Carreau, โยนโด่ง..." onkeyup="searchTechniques()"
+                        class="w-full px-4 py-3 pl-10 rounded-2xl bg-slate-950 border border-slate-800 text-xs font-semibold text-slate-200 focus:outline-none focus:border-sky-500 shadow-inner">
+                    <i class="fa-solid fa-magnifying-glass text-slate-500 absolute left-3.5 top-3.5 text-sm"></i>
+                </div>
+            </div>
+
+            <!-- Technique Cards Grid -->
+            <div id="technique-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Card 1 -->
+                <div class="tech-card glass-card rounded-3xl p-6 border border-slate-800 hover:border-slate-700 transition duration-300 flex flex-col justify-between" data-level="beginner">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 text-[10px] font-bold rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400">Beginner</span>
+                            <span class="text-xs text-slate-500"><i class="fa-regular fa-clock mr-1"></i>บทที่ 1</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">1. การจับลูกเปตอง (Grip Mechanics)</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed mb-4">
+                            จับด้วย 4 นิ้วชิดติดกัน ให้ลูกรองรับตรงข้อพับนิ้วแรก นิ้วหัวแม่มือประคองข้าง ห้ามใช้ฝ่ามือกดลูกแน่นเกินไป
+                        </p>
+                    </div>
+                    <button onclick="openModal('grip-modal')" class="w-full py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-sky-400 font-bold text-xs border border-slate-700 transition text-center flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-book-open"></i> อ่านคำอธิบายอย่างละเอียด
+                    </button>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="tech-card glass-card rounded-3xl p-6 border border-slate-800 hover:border-slate-700 transition duration-300 flex flex-col justify-between" data-level="beginner">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 text-[10px] font-bold rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400">Beginner</span>
+                            <span class="text-xs text-slate-500"><i class="fa-regular fa-clock mr-1"></i>บทที่ 2</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">2. การยืนและทรงตัวในวงกลม (Stance)</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed mb-4">
+                            เท้าอยู่ในวงกลมขนาด 35-50 ซม. เต็มเท้า ย่อเข่าเล็กน้อยสร้างศูนย์ถ่วง ยืนด้วยปลายเท้าส้นไม่ลอยขณะเหวี่ยงแขน
+                        </p>
+                    </div>
+                    <button onclick="openModal('stance-modal')" class="w-full py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-sky-400 font-bold text-xs border border-slate-700 transition text-center flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-book-open"></i> อ่านคำอธิบายอย่างละเอียด
+                    </button>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="tech-card glass-card rounded-3xl p-6 border border-slate-800 hover:border-slate-700 transition duration-300 flex flex-col justify-between" data-level="intermediate">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 text-[10px] font-bold rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400">Intermediate</span>
+                            <span class="text-xs text-slate-500"><i class="fa-solid fa-bullseye mr-1"></i>Pointing</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">3. การเข้าเรียบ (Rolling / Low Point)</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed mb-4">
+                            ปล่อยลูกให้ตกใกล้ตัวประมาณ 1/3 ของระยะทาง ให้ลูกหมุนกลิ้งเข้าหาแก่น เหมาะสำหรับสนามดินเรียบกดแน่น
+                        </p>
+                    </div>
+                    <button onclick="openModal('rolling-modal')" class="w-full py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-sky-400 font-bold text-xs border border-slate-700 transition text-center flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-book-open"></i> อ่านคำอธิบายอย่างละเอียด
+                    </button>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="tech-card glass-card rounded-3xl p-6 border border-slate-800 hover:border-slate-700 transition duration-300 flex flex-col justify-between" data-level="advanced">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 text-[10px] font-bold rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400">Advanced</span>
+                            <span class="text-xs text-slate-500"><i class="fa-solid fa-bullseye mr-1"></i>Pointing</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">4. การโยนโด่งข้ามอุปสรรค (High Lob)</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed mb-4">
+                            โยนลูกโด่งสูงมากกลางอากาศ ให้ลูกตกแนวดิ่งใกล้มุมแก่นแล้วหยุดทันที อาศัยการสะบัดข้อมือถอยหลัง (Backspin)
+                        </p>
+                    </div>
+                    <button onclick="openModal('highlob-modal')" class="w-full py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-sky-400 font-bold text-xs border border-slate-700 transition text-center flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-book-open"></i> อ่านคำอธิบายอย่างละเอียด
+                    </button>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="tech-card glass-card rounded-3xl p-6 border border-slate-800 hover:border-slate-700 transition duration-300 flex flex-col justify-between" data-level="advanced">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 text-[10px] font-bold rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400">Advanced</span>
+                            <span class="text-xs text-slate-500"><i class="fa-solid fa-crosshairs mr-1"></i>Shooting</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">5. ตีติด / ตีเปลี่ยน (Tir au Carreau)</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed mb-4">
+                            การยิงลูกกระทบเป้าหมายเต็มแรงจนลูกคู่แข่งกระเด็นออก ส่วนลูกยิงของเราหยุดแทนนิ่ง ณ ตำแหน่งเดิม
+                        </p>
+                    </div>
+                    <button onclick="openModal('carreau-modal')" class="w-full py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-sky-400 font-bold text-xs border border-slate-700 transition text-center flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-book-open"></i> อ่านคำอธิบายอย่างละเอียด
+                    </button>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="tech-card glass-card rounded-3xl p-6 border border-slate-800 hover:border-slate-700 transition duration-300 flex flex-col justify-between" data-level="intermediate">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 text-[10px] font-bold rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400">Intermediate</span>
+                            <span class="text-xs text-slate-500"><i class="fa-solid fa-crosshairs mr-1"></i>Shooting</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">6. การตีโดนตรง (Direct Hit Shooting)</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed mb-4">
+                            การตีลูกเป้าหมายในอากาศโดยไม่ตกกระทบพื้นก่อน เพื่อเคลียร์ลูกคู่แข่งออกจากพื้นที่ให้เด็ดขาด
+                        </p>
+                    </div>
+                    <button onclick="openModal('directhit-modal')" class="w-full py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-sky-400 font-bold text-xs border border-slate-700 transition text-center flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-book-open"></i> อ่านคำอธิบายอย่างละเอียด
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: HARDNESS & SPECS MATRIX -->
+    <section id="specs" class="py-16 bg-slate-950 scroll-mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-xs font-bold tracking-widest text-emerald-400 uppercase bg-emerald-400/10 border border-emerald-400/20 px-3.5 py-1 rounded-full inline-block mb-2">Equipment Engineering</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white font-heading">ตรรกะความแข็งและวัสดุโลหะ</h2>
+                <p class="text-slate-400 text-sm mt-2">วิเคราะห์ความแข็ง (Hardness Level in kg/mm²) และแรงยึดเกาะผิวสัมผัส</p>
+            </div>
+
+            <!-- Material Comparison Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <!-- Stainless Steel -->
+                <div class="glass-panel p-6 rounded-3xl border border-slate-800 relative overflow-hidden">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <div class="w-12 h-12 rounded-2xl bg-slate-200 text-slate-950 flex items-center justify-center font-bold text-xl shadow-lg">
+                            <i class="fa-solid fa-gem"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-white">สแตนเลส (Stainless Steel)</h3>
+                            <span class="text-xs text-emerald-400 font-mono">ไร้สนิม 100% | ทนทานยาวนาน</span>
+                        </div>
+                    </div>
+                    <p class="text-slate-300 text-xs leading-relaxed mb-6">
+                        ผลิตจากเหล็กกล้าผสมโครเมียม ไร้ปัญหาสนิม ไม่จำเป็นต้องใช้น้ำมันชโลมรักษาบ่อย เหมาะสำหรับผู้เล่นที่ชอบสัมผัสเนียนมือ
+                    </p>
+                    <div class="space-y-3 text-xs border-t border-slate-800 pt-4">
+                        <div>
+                            <div class="flex justify-between text-slate-400 mb-1">
+                                <span>ความทนทานต่อสนิม (Rust Resistance)</span>
+                                <span class="text-emerald-400 font-bold">10/10</span>
+                            </div>
+                            <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                                <div class="bg-emerald-400 h-full w-[100%]"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-slate-400 mb-1">
+                                <span>แรงยึดเกาะฝ่ามือ (Grip Texture)</span>
+                                <span class="text-amber-400 font-bold">7.5/10</span>
+                            </div>
+                            <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                                <div class="bg-amber-400 h-full w-[75%]"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carbon Steel -->
+                <div class="glass-panel p-6 rounded-3xl border border-slate-800 relative overflow-hidden">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <div class="w-12 h-12 rounded-2xl bg-terracotta-600 text-white flex items-center justify-center font-bold text-xl shadow-glow-orange">
+                            <i class="fa-solid fa-magnet"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-white">เหล็กคาร์บอน (Carbon Steel)</h3>
+                            <span class="text-xs text-terracotta-400 font-mono">ยึดเกาะสูงสุด | ขวัญใจมือตี</span>
+                        </div>
+                    </div>
+                    <p class="text-slate-300 text-xs leading-relaxed mb-6">
+                        เนื้อเหล็กให้แรงติดฝ่ามือดีเยี่ยม ชะลออาการลูกหลุดมือขณะเหวี่ยง แต่ต้องเช็ดทำความสะอาดชโลมน้ำมันสม่ำเสมอ
+                    </p>
+                    <div class="space-y-3 text-xs border-t border-slate-800 pt-4">
+                        <div>
+                            <div class="flex justify-between text-slate-400 mb-1">
+                                <span>ความทนทานต่อสนิม (Rust Resistance)</span>
+                                <span class="text-amber-400 font-bold">5/10 (ต้องใช้น้ำมัน)</span>
+                            </div>
+                            <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                                <div class="bg-amber-400 h-full w-[50%]"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-slate-400 mb-1">
+                                <span>แรงยึดเกาะฝ่ามือ (Grip Texture)</span>
+                                <span class="text-emerald-400 font-bold">9.8/10</span>
+                            </div>
+                            <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                                <div class="bg-emerald-400 h-full w-[98%]"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hardness Table -->
+            <div class="glass-panel rounded-3xl p-6 sm:p-8 border border-slate-800 overflow-hidden">
+                <h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
+                    <i class="fa-solid fa-shield-halved text-emerald-400"></i> ตารางเปรียบเทียบระดับความแข็ง (Hardness Matrix)
+                </h3>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-xs sm:text-sm">
+                        <thead class="bg-slate-900/90 text-slate-400 uppercase font-mono border-b border-slate-800">
+                            <tr>
+                                <th class="p-3.5">ระดับความแข็ง</th>
+                                <th class="p-3.5">ค่า (kg/mm²)</th>
+                                <th class="p-3.5">อัตราการสะท้อน (Rebound)</th>
+                                <th class="p-3.5">ตำแหน่งที่เหมาะสม</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-800/80 text-slate-300">
+                            <tr class="hover:bg-slate-800/40 transition">
+                                <td class="p-3.5 font-bold text-sky-400">นิ่มมาก (Very Soft)</td>
+                                <td class="p-3.5 font-mono">110 kg/mm²</td>
+                                <td class="p-3.5 text-emerald-400">ต่ำที่สุด (ซับแรงดีเยี่ยม)</td>
+                                <td class="p-3.5 text-white">มือตีระดับแข่งขัน (Shooter)</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/40 transition">
+                                <td class="p-3.5 font-bold text-emerald-400">นิ่ม (Soft)</td>
+                                <td class="p-3.5 font-mono">115 kg/mm²</td>
+                                <td class="p-3.5 text-emerald-400">ต่ำ (ควบคุมทิศทางง่าย)</td>
+                                <td class="p-3.5 text-white">มือตี & มือกลาง (Milieu)</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/40 transition">
+                                <td class="p-3.5 font-bold text-amber-400">ปานกลาง (Half-soft)</td>
+                                <td class="p-3.5 font-mono">120 kg/mm²</td>
+                                <td class="p-3.5 text-amber-400">ปานกลางสมดุล</td>
+                                <td class="p-3.5 text-white">มือเข้า / เล่นได้ทุกตำแหน่ง</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/40 transition">
+                                <td class="p-3.5 font-bold text-terracotta-400">แข็ง (Hard)</td>
+                                <td class="p-3.5 font-mono">140 kg/mm²</td>
+                                <td class="p-3.5 text-red-400">สูง (ทนทานต่อรอยขีดข่วน)</td>
+                                <td class="p-3.5 text-white">มือเข้า (Pointer) สนามหินแข็ง</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: TACTICS & TERRAIN STRATEGY -->
+    <section id="tactics" class="py-16 bg-slate-900/40 scroll-mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-xs font-bold tracking-widest text-purple-400 uppercase bg-purple-400/10 border border-purple-400/20 px-3.5 py-1 rounded-full inline-block mb-2">Tactical Playbook</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white font-heading">กลยุทธ์การเล่นและการแก้ทางสนาม</h2>
+                <p class="text-slate-400 text-sm mt-2">การเลือกไลน์การเล่นตามสภาพพื้นผิว และการตั้งการ์ดป้องกัน</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Hard Clay -->
+                <div class="glass-card p-6 rounded-3xl border border-slate-800 space-y-4">
+                    <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold text-lg">
+                        <i class="fa-solid fa-mountain"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white">1. สนามดินอัดแน่น (Hard Clay)</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        พื้นผิวแข็ง ลูกวิ่งไกลเมื่อกระทบพื้น ควรเผื่อระยะจุดตกก่อนถึงเป้าหมาย
+                    </p>
+                    <div class="p-3 rounded-xl bg-slate-950 border border-slate-800 text-xs text-slate-300 space-y-1">
+                        <span class="font-bold text-amber-400 block mb-1">กลยุทธ์แนะนำ:</span>
+                        <p>• เล่นลูกเข้าเรียบ (Rolling) ปล่อยจุดตกให้ห่างจากแก่น</p>
+                        <p>• มือตีต้องใช้เทคนิค Direct Hit เพื่อเลี่ยงลูกกระดอน</p>
+                    </div>
+                </div>
+
+                <!-- Loose Gravel -->
+                <div class="glass-card p-6 rounded-3xl border border-slate-800 space-y-4">
+                    <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-lg">
+                        <i class="fa-solid fa-cubes"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white">2. สนามหินร่วน (Gravel)</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        ทิศทางลูกเดายากเมื่อชนหิน ควรใช้เทคนิคโยนโด่งข้ามหิน
+                    </p>
+                    <div class="p-3 rounded-xl bg-slate-950 border border-slate-800 text-xs text-slate-300 space-y-1">
+                        <span class="font-bold text-emerald-400 block mb-1">กลยุทธ์แนะนำ:</span>
+                        <p>• ใช้เทคนิค High Lob (โยนโด่ง) ให้ตกดิ่งใกล้มุมแก่น</p>
+                        <p>• หลีกเลี่ยงการปล่อยลูกกลิ้งเรียบเพราะหินจะปัดลูกแฉลบ</p>
+                    </div>
+                </div>
+
+                <!-- Defense & Blocking -->
+                <div class="glass-card p-6 rounded-3xl border border-slate-800 space-y-4">
+                    <div class="w-10 h-10 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center font-bold text-lg">
+                        <i class="fa-solid fa-shield"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white">3. การตั้งการ์ดบล็อก (Blocking)</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        วางลูกขวางหน้าแก่นระยะ 30-50 ซม. ในเส้นทางตรงเพื่อบีบฝั่งตรงข้าม
+                    </p>
+                    <div class="p-3 rounded-xl bg-slate-950 border border-slate-800 text-xs text-slate-300 space-y-1">
+                        <span class="font-bold text-purple-400 block mb-1">กลยุทธ์แนะนำ:</span>
+                        <p>• บังคับให้คู่แข่งต้องตีลูกการ์ดเราออก</p>
+                        <p>• สร้างความกดดันให้มือยิงฝั่งตรงข้ามเสียสมาธิ</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 text-slate-500 py-12 border-t border-slate-800/80 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-terracotta-600 to-amber-500 flex items-center justify-center text-slate-950 font-bold text-lg shadow-glow-orange">
+                        <i class="fa-solid fa-circle-dot"></i>
+                    </div>
+                    <div>
+                        <span class="text-white font-bold text-lg font-heading block">Petanque Master Guide Pro</span>
+                        <span class="text-xs text-slate-400">ระบบชี้นำเทคนิคการเล่นและวิเคราะห์สเปกลูกเปตองระดับอาชีพ</span>
+                    </div>
+                </div>
+
+                <!-- Prominent Developer Credit Card in Footer -->
+                <div class="glass-card px-5 py-3 rounded-2xl border border-amber-500/30 flex items-center gap-3 bg-slate-900/90 shadow-2xl">
+                    <div class="w-9 h-9 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center shrink-0">
+                        <i class="fa-solid fa-user-gear text-lg"></i>
+                    </div>
+                    <div class="text-left">
+                        <span class="text-[10px] uppercase font-bold tracking-widest text-slate-400 block">Lead Visual & UX Developer</span>
+                        <span class="text-xs font-extrabold text-amber-300">ผู้ออกแบบสร้างสรรค์พัฒนา: ฐิติวัสส์ กาญจนาพิมาย</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-900 pt-6 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 gap-4">
+                <p>© 2026 Petanque Master Guide Pro. Developed by ฐิติวัสส์ กาญจนาพิมาย (Thitiwat Kanjanaphimai).</p>
+                <div class="flex gap-4 text-slate-400">
+                    <span><i class="fa-solid fa-shield-halved text-emerald-400 mr-1"></i> FIPJP Compliant</span>
+                    <span><i class="fa-solid fa-code text-sky-400 mr-1"></i> UI/UX Promax Edition</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL BACKDROP & DIALOG -->
+    <div id="modal-backdrop" class="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-50 hidden flex items-center justify-center p-4">
+        <div class="glass-panel rounded-3xl max-w-xl w-full p-6 sm:p-8 shadow-2xl relative border border-slate-700 max-h-[85vh] overflow-y-auto">
+            <button onclick="closeModal()" class="absolute top-5 right-5 text-slate-400 hover:text-white p-2">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // MOBILE MENU DRAWER TOGGLE
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+        });
+
+        // CANVAS TRAJECTORY SIMULATOR PHYSICS ENGINE
+        const canvas = document.getElementById('trajectoryCanvas');
+        const ctx = canvas.getContext('2d');
+
+        let currentTrajMode = 'rolling';
+        let animProgress = 0;
+        let animId = null;
+
+        const trajConfigs = {
+            'rolling': {
+                apexX: 0.25, apexY: 0.35, landX: 0.45, finalX: 0.88,
+                title: 'การเข้าเรียบ (Rolling Pointing)',
+                text: 'ปล่อยลูกให้ลอยต่ำ ตกกระทบพื้นดินห่างจากแก่นประมาณ 2/3 ของระยะทาง แล้วให้ลูกวิ่งกลิ้งเข้าใกล้เป้าหมาย เหมาะสำหรับสนามดินบดแน่นราบเรียบ',
+                apexText: '0.4m', landingText: '2.5m', spinText: 'Low Spin'
+            },
+            'halflob': {
+                apexX: 0.35, apexY: 0.65, landX: 0.68, finalX: 0.88,
+                title: 'โยนครึ่งโด่ง (Demi-Portée)',
+                text: 'โยนลูกลอยสูงระดับปานกลาง ให้ลูกตกประมาณครึ่งทาง แล้วกลิ้งต่อเข้าหาแก่น ป้องกันการแฉลบหินขวางทาง',
+                apexText: '1.5m', landingText: '4.8m', spinText: 'Medium Backspin'
+            },
+            'highlob': {
+                apexX: 0.45, apexY: 0.90, landX: 0.82, finalX: 0.86,
+                title: 'โยนโด่งสูง (High Lob / Portée)',
+                text: 'โยนลูกลอยสูงมากกลางอากาศ ให้ลูกตกดิ่งใกล้มุมแก่น พร้อมแรงหมุน Backspin รุนแรง ทำให้ลูกหยุดนิ่งทันทีหลังตกกระทบ',
+                apexText: '3.2m', landingText: '7.2m', spinText: 'High Backspin'
+            },
+            'carreau': {
+                apexX: 0.45, apexY: 0.55, landX: 0.88, finalX: 0.88,
+                title: 'ตีติด / ตีเปลี่ยน (Carreau Shooting)',
+                text: 'ยิงลูกพุ่งตรงเข้าชนกลางลูกเป้าหมายอย่างเต็มแรง ลูกเป้าหมายกระเด็นออก ส่วนลูกยิงหยุดหยุดนิ่งแทนนิ่ง ณ ตำแหน่งเดิม',
+                apexText: '1.2m', landingText: '8.0m (Direct Hit)', spinText: 'Max Backspin'
+            }
+        };
+
+        function resizeCanvas() {
+            canvas.width = canvas.parentElement.clientWidth;
+            canvas.height = canvas.parentElement.clientHeight;
+            drawTrajectory();
+        }
+
+        window.addEventListener('resize', resizeCanvas);
+
+        function setTrajectoryMode(mode) {
+            currentTrajMode = mode;
+            document.querySelectorAll('.traj-btn').forEach(btn => {
+                btn.className = 'traj-btn px-5 py-2.5 rounded-xl text-xs font-bold transition flex items-center gap-2 bg-slate-800 text-slate-300 hover:bg-slate-700';
+            });
+            document.getElementById(`btn-traj-${mode}`).className = 'traj-btn px-5 py-2.5 rounded-xl text-xs font-bold transition flex items-center gap-2 bg-terracotta-600 text-white shadow-glow-orange';
+
+            const cfg = trajConfigs[mode];
+            document.getElementById('sim-title').innerText = cfg.title;
+            document.getElementById('sim-text').innerText = cfg.text;
+            document.getElementById('sim-apex').innerText = cfg.apexText;
+            document.getElementById('sim-landing').innerText = cfg.landingText;
+            document.getElementById('sim-spin').innerText = cfg.spinText;
+
+            runTrajectoryAnim();
+        }
+
+        function runTrajectoryAnim() {
+            animProgress = 0;
+            if (animId) cancelAnimationFrame(animId);
+            animateCanvas();
+        }
+
+        function animateCanvas() {
+            animProgress += 0.02;
+            drawTrajectory();
+            if (animProgress < 1) {
+                animId = requestAnimationFrame(animateCanvas);
+            }
+        }
+
+        function drawTrajectory() {
+            if (!canvas.width) return;
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            const cfg = trajConfigs[currentTrajMode];
+            const startX = canvas.width * 0.08;
+            const startY = canvas.height * 0.82;
+            const groundY = canvas.height * 0.82;
+
+            // Draw Ground Surface
+            ctx.beginPath();
+            ctx.moveTo(0, groundY);
+            ctx.lineTo(canvas.width, groundY);
+            ctx.strokeStyle = '#334155';
+            ctx.lineWidth = 3;
+            ctx.stroke();
+
+            // Ground fill
+            ctx.fillStyle = '#0f172a';
+            ctx.fillRect(0, groundY, canvas.width, canvas.height - groundY);
+
+            // Target Jack (Cochonnet)
+            const jackX = canvas.width * 0.88;
+            ctx.beginPath();
+            ctx.arc(jackX, groundY - 6, 6, 0, Math.PI * 2);
+            ctx.fillStyle = '#fbbf24';
+            ctx.fill();
+
+            // Calculate Curve Points
+            const apexX = canvas.width * cfg.apexX;
+            const apexY = groundY - (canvas.height * 0.65 * cfg.apexY);
+            const landX = canvas.width * cfg.landX;
+            const finalX = canvas.width * cfg.finalX;
+
+            // Dotted Full Trajectory Line
+            ctx.beginPath();
+            ctx.moveTo(startX, startY);
+            ctx.quadraticCurveTo(apexX, apexY, landX, groundY);
+            ctx.lineTo(finalX, groundY);
+            ctx.setLineDash([4, 4]);
+            ctx.strokeStyle = 'rgba(224, 83, 38, 0.4)';
+            ctx.lineWidth = 2;
+            ctx.stroke();
+            ctx.setLineDash([]);
+
+            // Animated Moving Ball along Path
+            let ballX, ballY;
+            if (animProgress <= 0.7) {
+                const t = animProgress / 0.7;
+                ballX = (1 - t) * (1 - t) * startX + 2 * (1 - t) * t * apexX + t * t * landX;
+                ballY = (1 - t) * (1 - t) * startY + 2 * (1 - t) * t * apexY + t * t * groundY;
+            } else {
+                const t = (animProgress - 0.7) / 0.3;
+                ballX = landX + (finalX - landX) * t;
+                ballY = groundY;
+            }
+
+            // Draw Petanque Ball
+            ctx.beginPath();
+            ctx.arc(ballX, ballY - 10, 10, 0, Math.PI * 2);
+            ctx.fillStyle = '#e2e8f0';
+            ctx.fill();
+            ctx.strokeStyle = '#cb3a11';
+            ctx.lineWidth = 2;
+            ctx.stroke();
+        }
+
+        // Initialize Canvas on Load
+        setTimeout(() => {
+            resizeCanvas();
+            setTrajectoryMode('rolling');
+        }, 100);
+
+        // PETANQUE CALCULATOR LOGIC
+        let selectedPos = 'pointer';
+
+        function setCalcPosition(pos) {
+            selectedPos = pos;
+            document.querySelectorAll('.calc-pos-btn').forEach(btn => {
+                btn.className = 'calc-pos-btn p-3 rounded-2xl border text-center transition bg-slate-900 border-slate-800 text-slate-400 hover:text-slate-200';
+            });
+            document.getElementById(`btn-pos-${pos}`).className = 'calc-pos-btn p-3 rounded-2xl border text-center transition bg-terracotta-600/20 border-terracotta-500 text-white';
+            updateCalculator();
+        }
+
+        function updateCalculator() {
+            const handLen = parseInt(document.getElementById('hand-slider').value);
+            document.getElementById('hand-length-val').innerText = `${handLen} mm`;
+
+            let dia = 72;
+            let weight = 690;
+            let hardness = 'ปานกลาง (Half-soft)';
+            let hardnessVal = '120 kg/mm²';
+            let material = 'สแตนเลส (Stainless Steel)';
+            let advice = '';
+
+            if (handLen < 165) dia = 71;
+            else if (handLen <= 175) dia = 72;
+            else if (handLen <= 185) dia = 73;
+            else if (handLen <= 195) dia = 74;
+            else dia = 75;
+
+            if (selectedPos === 'pointer') {
+                weight = 700;
+                hardness = 'แข็ง (Hard)';
+                hardnessVal = '140 kg/mm²';
+                material = 'สแตนเลส หรือ เหล็กคาร์บอนลายเดี่ยว';
+                advice = 'เน้นลูกขนาดกระชับมือ น้ำหนักแน่นเพื่อยึดตำแหน่งหน้าแก่นไม่หลุดแฉลบ';
+            } else if (selectedPos === 'shooter') {
+                dia = Math.min(80, dia + 1);
+                weight = 680;
+                hardness = 'นิ่มมาก (Very Soft)';
+                hardnessVal = '110 kg/mm²';
+                material = 'เหล็กคาร์บอน (Carbon Steel) ลูกเรียบไร้ลาย';
+                advice = 'ลูกนิ่มช่วยซับแรงกระแทก ตีติด (Carreau) ได้ดีเยี่ยม และลดอาการเมื่อยแขน';
+            } else {
+                weight = 690;
+                hardness = 'นิ่ม (Soft)';
+                hardnessVal = '115 kg/mm²';
+                material = 'สแตนเลส สเปกสมดุล';
+                advice = 'สมดุลทั้งการเข้าลูกและการยิง เหมาะสำหรับตำแหน่งเล่นรอบด้าน';
+            }
+
+            document.getElementById('res-diameter').innerText = `${dia} มม.`;
+            document.getElementById('res-dia-range').innerText = `${dia - 1}-${dia + 1}`;
+            document.getElementById('res-weight').innerText = `${weight} กรัม`;
+            document.getElementById('res-weight-range').innerText = `${weight - 10}-${weight + 10}`;
+            document.getElementById('res-hardness').innerText = hardness;
+            document.getElementById('res-hardness-val').innerText = hardnessVal;
+            document.getElementById('res-material').innerText = material;
+            document.getElementById('res-advice').innerText = advice;
+
+            const percent = Math.min(100, Math.max(20, Math.round(((handLen - 150) / 70) * 100)));
+            document.getElementById('fit-percent').innerText = `${percent}%`;
+            document.getElementById('fit-gauge-bar').style.width = `${percent}%`;
+        }
+
+        updateCalculator();
+
+        // FILTER & SEARCH TECHNIQUES
+        function filterTechniques(level) {
+            const cards = document.querySelectorAll('.tech-card');
+            const btns = document.querySelectorAll('.tech-filter-btn');
+
+            btns.forEach(btn => {
+                if (btn.getAttribute('data-filter') === level) {
+                    btn.className = 'tech-filter-btn px-4 py-2 text-xs font-bold rounded-xl border transition bg-terracotta-600 text-white border-terracotta-500';
+                } else {
+                    btn.className = 'tech-filter-btn px-4 py-2 text-xs font-bold rounded-xl border transition bg-slate-800 text-slate-300 border-slate-700 hover:bg-slate-700';
+                }
+            });
+
+            cards.forEach(card => {
+                if (level === 'all' || card.getAttribute('data-level') === level) {
+                    card.classList.remove('hidden');
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+        }
+
+        function searchTechniques() {
+            const query = document.getElementById('tech-search').value.toLowerCase();
+            document.querySelectorAll('.tech-card').forEach(card => {
+                const text = card.innerText.toLowerCase();
+                if (text.includes(query)) card.classList.remove('hidden');
+                else card.classList.add('hidden');
+            });
+        }
+
+        // MODAL DATA & FUNCTIONS
+        const modalData = {
+            'grip-modal': {
+                title: 'การจับลูกเปตอง (Grip Mechanics)',
+                content: `
+                    <div class="space-y-4 text-xs sm:text-sm text-slate-300">
+                        <p>หัวใจสำคัญของการควบคุมทิศทางลูกคือการไม่ใช้ฝ่ามือโอบกำแน่น แต่ให้แขวนลูกด้วยปลายนิ้ว</p>
+                        <ul class="list-disc list-inside space-y-1 text-slate-300">
+                            <li>วางลูกบนรอยพับข้อนิ้วทั้ง 4 (นิ้วชี้ ถึง นิ้วก้อย ชิดกัน)</li>
+                            <li>นิ้วหัวแม่มือประคองข้างหลวมๆ ห้ามใช้กดลูก</li>
+                            <li>ขณะปล่อยลูก สะบัดข้อมือขึ้นเบาๆ ให้ลูกผ่านปลายนิ้วสร้าง Backspin</li>
+                        </ul>
+                    </div>
+                `
+            },
+            'stance-modal': {
+                title: 'การยืนและทรงตัวในวงกลม (Stance)',
+                content: `
+                    <div class="space-y-4 text-xs sm:text-sm text-slate-300">
+                        <p>เท้าทั้งสองต้องวางราบอยู่ภายในวงกลมขนาด 35-50 ซม. ห้ามยกเท้าหรือเหยียบขอบวงกลมก่อนลูกตกพื้น</p>
+                        <p>ย่อเข่าเล็กน้อยสร้างศูนย์ถ่วง ลำตัวนิ่ง สายตาเพ่งที่จุดตกเป้าหมาย (Donnée)</p>
+                    </div>
+                `
+            },
+            'rolling-modal': {
+                title: 'การเข้าเรียบ (Rolling Pointing)',
+                content: `
+                    <div class="space-y-4 text-xs sm:text-sm text-slate-300">
+                        <p>ปล่อยลูกให้ลอยต่ำ ตกกระทบพื้นดินห่างจากเป้าหมาย แล้วให้ลูกวิ่งกลิ้งเข้าหาแก่น เหมาะกับสนามดินบดแน่นราบเรียบ</p>
+                    </div>
+                `
+            },
+            'highlob-modal': {
+                title: 'การโยนโด่งข้ามอุปสรรค (High Lob)',
+                content: `
+                    <div class="space-y-4 text-xs sm:text-sm text-slate-300">
+                        <p>เหวี่ยงแขนสูงขึ้นฟ้า ปล่อยลูกมุมดิ่ง พร้อมสะบัดข้อมือถอยหลัง (Backspin) รุนแรง เพื่อหยุดวิถีลูกทันทีหลังตกกระทบพื้น</p>
+                    </div>
+                `
+            },
+            'carreau-modal': {
+                title: 'ตีติด / ตีเปลี่ยน (Tir au Carreau)',
+                content: `
+                    <div class="space-y-4 text-xs sm:text-sm text-slate-300">
+                        <p>ยิงลูกพุ่งตรงเข้าชนกลางลูกเป้าหมายอย่างเต็มแรง ลูกเป้าหมายกระเด็นออก ส่วนลูกยิงหยุดหยุดนิ่งแทนนิ่ง ณ ตำแหน่งเดิม</p>
+                    </div>
+                `
+            },
+            'directhit-modal': {
+                title: 'การตีโดนตรง (Direct Hit Shooting)',
+                content: `
+                    <div class="space-y-4 text-xs sm:text-sm text-slate-300">
+                        <p>การยิงลูกเป้าหมายในอากาศโดยไม่ตกกระทบพื้นก่อน เพื่อเคลียร์ลูกคู่แข่งออกจากพื้นที่อย่างเด็ดขาด</p>
+                    </div>
+                `
+            }
+        };
+
+        function openModal(key) {
+            const data = modalData[key];
+            if (data) {
+                document.getElementById('modal-body').innerHTML = `
+                    <h3 class="text-lg font-bold text-white mb-4 pb-2 border-b border-slate-800">${data.title}</h3>
+                    ${data.content}
+                `;
+                document.getElementById('modal-backdrop').classList.remove('hidden');
+            }
+        }
+
+        function closeModal() {
+            document.getElementById('modal-backdrop').classList.add('hidden');
+        }
+
+        document.getElementById('modal-backdrop').addEventListener('click', (e) => {
+            if (e.target.id === 'modal-backdrop') closeModal();
+        });
+    </script>
+</body>
+</html>

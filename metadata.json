@@ -1,0 +1,6 @@
+{
+  "name": "Petanque Master Guide Pro",
+  "description": "คู่มือและระบบวิเคราะห์เทคนิคเปตองระดับมืออาชีพ วิเคราะห์สเปกลูกเปตอง จำลองวิถีลูก Trajectory Visualizer และกลยุทธ์การเล่นตามมาตรฐาน FIPJP",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
